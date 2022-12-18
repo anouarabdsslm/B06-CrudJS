@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/bbf4b1b19f.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Cosmetic cart
+
+  </title>
+</head>
+
+<body>
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <h2>find your best product </h2>
+      <div class="error"></div>
+
+      <form action="javascript:void(0);" method="POST" onsubmit=" event.preventDefault()">
+        <!-- name Product -->
+        <div class="formbold-input-group">
+          <label for="addName" class="formbold-form-label"> Product Name </label>
+          <input type="text" id="addName" placeholder="Enter product name" class="formbold-form-input" >
+        </div>
+        <!-- brand Product -->
+        <div class="formbold-input-group">
+          <label for="addBrand" class="formbold-form-label"> Product Brand</label>
+          <input type="text" name="lastname" id="addBrand" placeholder="Enter Product Brand"
+            class="formbold-form-input">
+        </div>
+        <!-- date Product -->
+        <div class="formbold-input-group">
+          <label for="addDate" class="formbold-form-label"> Date </label>
+          <input type="date" name="date" id="addDate" class="formbold-form-input" >
+        </div>
+        <!-- price Product -->
+        <div class="formbold-input-group">
+          <label for="addPrice" class="formbold-form-label"> Product Price</label>
+          <input type="number" name="price" id="addPrice" placeholder="Enter Product Price" class="formbold-form-input">
+        </div>
+        <!-- type Product -->
+        <div class="formbold-input-group">
+          <label class="formbold-form-label" for="addType">Product Type </label>
+          <select class="formbold-form-select" name="type" id="addType">
+            <option value="">None</option>
+            <option value="Eye Makeup">Eye Makeup</option>
+            <option value="Makeup">Makeup</option>
+            <option value="Perfumes">Perfumes</option>
+            <option value="Manicuring ">Manicuring </option>
+            <option value="Skin Care">Skin Care</option>
+          </select>
+        </div>
+        <!-- discount Product -->
+        <div class="formbold-input-radio-wrapper">
+          <label for="discount" class="formbold-form-label">
+            Would you recomend a Product discount?
+          </label>
+
+          <div class=" Product formbold-radio-flex">
+            <div class="formbold-radio-group">
+              <label class="formbold-radio-label">
+                <input class="formbold-input-radio" type="radio" name="discount" id="discount">
+                Yes<span class="formbold-radio-checkmark"></span></label>
+            </div>
+
+            <div class="formbold-radio-group">
+              <label class="formbold-radio-label">
+                <input class="formbold-input-radio" type="radio" name="discount" > No <span
+                  class="formbold-radio-checkmark"></span></label>
+            </div>
+
+            <div class="formbold-radio-group">
+                  <label class="formbold-radio-label">
+                    <input class="formbold-input-radio" type="radio" name="discount"> Maybe <span class="formbold-radio-checkmark"></span></label>
+                </div>
+          </div>
+        </div>
+
+        <!-- submit button -->
+        <button class="formbold-btn btn" id="submitBtn" onclick="app.Add()" value="Add Product">Add Product</button>
+        <!-- <input type="hidden" id="editBtn"> -->
+      </form>
+      <p class="formbold-form-label" id="alert"></p>
+
+    </div>
+  </div>
+  <!-- Table Products -->
+  <div class="table-wrapper">
+    <table class="fl-table">
+      <thead>
+        <tr>
+          <th>Product Name </th>
+          <th>Product Brand</th>
+          <th>date of Product</th>
+          <th>Product Price</th>
+          <th>Product Type</th>
+          <th>Product discount</th>
+          <th id="action">Action to confirm</th>
+        </tr>
+      </thead>
+      <tbody id="ItemsTable">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
