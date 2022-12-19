@@ -121,7 +121,7 @@ var app = new (function () {
         document.getElementById("addDate").value = "";
         document.getElementById("addPrice").value = "";
         document.getElementById("addType").value = "";
-        // discountProduct.checked = false;
+        document.querySelector('input[name="discount"]:checked').checked = false;
       };
       this.resetForm();
       // Dislay the new list
