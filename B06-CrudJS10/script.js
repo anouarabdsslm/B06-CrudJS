@@ -59,12 +59,9 @@ var app = new (function () {
 
     // Add the new value
     if (
-      newNameProduct.length == "" ||
-      newBrandProduct.length == "" ||
-      newDateProduct.length == "" ||
-      newPriceProduct.length == "" ||
-      newTypeProduct.length == "" ||
-      newDiscountProduct.length == ""
+      newNameProduct.length == "" || newBrandProduct.length == "" ||
+      newDateProduct.length == "" || newPriceProduct.length == "" ||
+      newTypeProduct.length == "" || newDiscountProduct.length == ""
     ) {
       ErrorAlert("Please fill in all fields", "error");
     } else if (newNameProduct.length > 20) {
